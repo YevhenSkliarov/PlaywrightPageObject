@@ -4,7 +4,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "playwright": "^1.16.3"
+    "dotenv": "^10.0.0",
+    "playwright": "^1.16.3",
+    "prettier": "^2.5.1"
   },
   "scripts": {
     "test": "npx playwright test --reporter=line,allure-playwright"
