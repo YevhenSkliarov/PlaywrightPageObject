@@ -1,0 +1,27 @@
+{
+  "name": "mail",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "playwright": "^1.16.3"
+  },
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.16.3"
+  }
+}
