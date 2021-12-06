@@ -7,7 +7,7 @@
     "playwright": "^1.16.3"
   },
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test --reporter=line,allure-playwright"
   },
   "browserslist": {
     "production": [
@@ -22,6 +22,7 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.16.3"
+    "@playwright/test": "^1.16.3",
+    "allure-playwright": "^2.0.0-beta.14"
   }
 }

@@ -1,5 +1,8 @@
 export default {
     timeout: 200000,
+    reporter: [
+        ['allure-playwright']
+      ],
     use: {
       // Browser options
       headless: false,
