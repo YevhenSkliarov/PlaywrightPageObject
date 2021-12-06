@@ -1,7 +1,7 @@
-import BasePage from "./BasePage.js";
+import BasePage from './BasePage.js';
 
-export default class TransalatePage extends BasePage{
-    constructor(page){
-        super(page)
-    }
+export default class TransalatePage extends BasePage {
+  constructor(page) {
+    super(page);
+  }
 }

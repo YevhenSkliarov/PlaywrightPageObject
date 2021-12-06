@@ -1,5 +1,5 @@
-export default class BasePage{
-    constructor(page){
-        this.page = page;
-    }
+export default class BasePage {
+  constructor(page) {
+    this.page = page;
+  }
 }
