@@ -1,5 +1,4 @@
 import BasePage from './BasePage.js';
-import { expect } from '@playwright/test';
 
 export default class HomePage extends BasePage {
   constructor(page) {
