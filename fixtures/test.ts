@@ -31,7 +31,7 @@ export const test = base.extend<App>({
   },
   users: async ({}, use) => {
     use(users);
-  }
+  },
 });
 
 export { expect } from '@playwright/test';
