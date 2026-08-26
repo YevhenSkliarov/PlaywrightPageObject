@@ -2,3 +2,12 @@ node_modules
 package-lock.json
 /test-results/
 /allure-results/
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+
+.env
