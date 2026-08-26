@@ -10,7 +10,8 @@ Playwright Test automation suite for [SauceDemo](https://www.saucedemo.com), wri
 - **Env vars**: loaded via `dotenv` in `global-setup.ts`.
 - **Formatting**: `prettier` (^2.5.1) configured via `.prettierrc.json` (single quotes, semicolons, 100 print width, trailing commas). Run `npm run format` / `npm run format:check`.
 - **Type checking**: `npm run typecheck` (`tsc --noEmit`).
-- Not yet present: ESLint, CI/CD (`.github/workflows`).
+- **Linting**: ESLint (flat config, `eslint.config.js`) — `@eslint/js` + `typescript-eslint` recommended rules, `eslint-plugin-playwright` recommended rules scoped to `tests/**/*.ts`, `eslint-config-prettier` to defer style to Prettier. Run `npm run lint` / `npm run lint:fix`.
+- Not yet present: CI/CD (`.github/workflows`).
 
 ## Commands
 
@@ -22,6 +23,7 @@ npx playwright show-report            # open the last HTML report
 npx allure generate allure-results --clean -o allure-report && npx allure open allure-report
 npm run typecheck                     # tsc --noEmit
 npm run format / npm run format:check # prettier --write / --check
+npm run lint / npm run lint:fix       # eslint . / eslint . --fix
 ```
 
 Target app: `baseURL: https://www.saucedemo.com` (public demo site, no local dev server to boot).
@@ -42,12 +44,12 @@ manual-test-cases/       Manual test case CSVs (TestRail/Xray-style), one file p
 global-setup.ts          Playwright globalSetup — loads dotenv
 playwright.config.ts     testDir: ./tests, testIdAttribute: 'data-test', baseURL, chromium/firefox/webkit projects
 .mcp.json                Playwright MCP server (browser automation for AI sub-agents)
+eslint.config.js         ESLint flat config (typescript-eslint + eslint-plugin-playwright + prettier)
 ```
 
 ## Conventions
 
 These are established by the existing code and enforced by the `playwright-test-authoring` skill (see below) — follow them for any new test.
-
 
 ## AI-assisted test generation
 
