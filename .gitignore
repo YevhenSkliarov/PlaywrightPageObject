@@ -2,6 +2,7 @@ node_modules
 package-lock.json
 /test-results/
 /allure-results/
+/allure-report/
 
 # Playwright
 /playwright-report/
