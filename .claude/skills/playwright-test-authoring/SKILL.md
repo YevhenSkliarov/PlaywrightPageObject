@@ -52,6 +52,7 @@ Rules:
 - One file per page, `PascalCase.ts`, filename matches the class name, flat in `PageObjects/` (no subfolders, no `.page.ts` suffix).
 - Action methods are `async`, take a typed domain object as the parameter when the action involves more than one field (see `User` in `LoginPage.ts`), and live on the page class itself.
 - Only add a navigation method (`open()`-style) if the page is a real entry point; otherwise pages are reached via another page's action, matching how `ProductsPage` has no `open()`.
+- Don't use hardcoded waits or `page.waitForTimeout` — rely on Playwright's built-in auto-waiting for actions and assertions.
 
 ## 3. Fixtures (`fixtures/test.ts`)
 
