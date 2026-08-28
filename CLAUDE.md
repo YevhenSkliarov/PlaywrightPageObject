@@ -7,7 +7,7 @@ Playwright Test automation suite for [SauceDemo](https://www.saucedemo.com), wri
 - **Test runner**: `@playwright/test` (^1.62.1) — no wrapper (no Mocha/Jest/Cucumber).
 - **Language**: TypeScript, ESM (`"type": "module"` in package.json). `tsconfig.json` targets ES2022 with `strict` mode, `moduleResolution: Bundler` (matches Playwright's own transpile-per-file behavior — no explicit `.js` extensions needed on relative imports).
 - **Reporting**: built-in `html` reporter + `allure-playwright`.
-- **Env vars**: loaded via `dotenv` in `global-setup.ts`.
+- **Env vars**: loaded via `dotenv` in `playwright.config.ts`.
 - **Formatting**: `prettier` (^2.5.1) configured via `.prettierrc.json` (single quotes, semicolons, 100 print width, trailing commas). Run `npm run format` / `npm run format:check`.
 - **Type checking**: `npm run typecheck` (`tsc --noEmit`).
 - **Linting**: ESLint (flat config, `eslint.config.js`) — `@eslint/js` + `typescript-eslint` recommended rules, `eslint-plugin-playwright` recommended rules scoped to `tests/**/*.ts`, `eslint-config-prettier` to defer style to Prettier. Run `npm run lint` / `npm run lint:fix`.
@@ -41,8 +41,7 @@ tests/
   test-data/
     test-data.ts         Expected-value constants, <page>ExpectedData naming
 manual-test-cases/       Manual test case CSVs (TestRail/Xray-style), one file per feature
-global-setup.ts          Playwright globalSetup — loads dotenv
-playwright.config.ts     testDir: ./tests, testIdAttribute: 'data-test', baseURL, chromium/firefox/webkit projects
+playwright.config.ts     Loads dotenv; testDir: ./tests, testIdAttribute: 'data-test', baseURL, chromium/firefox/webkit projects
 .mcp.json                Playwright MCP server (browser automation for AI sub-agents)
 eslint.config.js         ESLint flat config (typescript-eslint + eslint-plugin-playwright + prettier)
 ```
